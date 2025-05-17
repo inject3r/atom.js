@@ -7,8 +7,8 @@
   </a>
   <h1>Atom.js</h1>
 
-<a href="https://www.npmjs.com/package/atomjs">
-  <img alt="NPM version" src="https://img.shields.io/npm/v/atomjs.svg?style=for-the-badge&labelColor=000000">
+<a href="https://www.npmjs.com/package/react-atomjs">
+  <img alt="NPM version" src="https://img.shields.io/npm/v/react-atomjs.svg?style=for-the-badge&labelColor=000000">
 </a>
 <a href="https://github.com/inject3r/atom.js/blob/main/readme.md">
   <img alt="License" src="https://img.shields.io/github/license/inject3r/atom.js.svg?style=for-the-badge&labelColor=000000">
@@ -25,18 +25,18 @@ Coming soon...
 
 ## Installation
 
-You can install `atomjs` via npm or yarn:
+You can install `react-atomjs` via npm or yarn:
 
 ### NPM:
 
 ```bash
-npm install atomjs
+npm install react-atomjs
 ```
 
 ### Yarn:
 
 ```bash
-yarn add atomjs
+yarn add react-atomjs
 ```
 
 ## Contributing
