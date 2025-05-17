@@ -1,0 +1,64 @@
+<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow -->
+    <radialGradient id="mainGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58c4dc" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#58c4dc" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass-style gradient -->
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+    </linearGradient>
+
+    <!-- Orbit Gradient -->
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#58c4dc"/>
+      <stop offset="100%" stop-color="#0DCAF6"/>
+    </linearGradient>
+
+    <!-- Pulse Glow -->
+    <radialGradient id="pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58c4dc" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#58c4dc" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Blur Filter -->
+    <filter id="blur1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Glow -->
+  <circle cx="80" cy="80" r="70" fill="url(#mainGlow)" filter="url(#blur1)"/>
+
+  <!-- Rotating Orbit Rings -->
+  <g stroke="url(#orbit)" stroke-width="2" opacity="0.4">
+    <ellipse cx="80" cy="80" rx="65" ry="25" transform="rotate(0 80 80)">
+      <animateTransform attributeName="transform" type="rotate" from="0 80 80" to="360 80 80" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="80" cy="80" rx="65" ry="25" transform="rotate(60 80 80)">
+      <animateTransform attributeName="transform" type="rotate" from="0 80 80" to="-360 80 80" dur="30s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="80" cy="80" rx="65" ry="25" transform="rotate(120 80 80)">
+      <animateTransform attributeName="transform" type="rotate" from="0 80 80" to="360 80 80" dur="25s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Glass Core with Orbit -->
+  <circle cx="80" cy="80" r="40" fill="#111" stroke="url(#orbit)" stroke-width="2"/>
+  <circle cx="80" cy="80" r="38" fill="url(#glass)"/>
+
+  <!-- Pulse Center -->
+  <circle cx="80" cy="80" r="6" fill="#58c4dc">
+    <animate attributeName="r" values="6;9;6" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Extra glow around core -->
+  <circle cx="80" cy="80" r="20" fill="url(#pulse)" opacity="0.3">
+    <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
